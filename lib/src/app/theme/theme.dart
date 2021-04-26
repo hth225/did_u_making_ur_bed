@@ -6,6 +6,10 @@ ThemeData buildLightThemeData() {
     accentColor: Colors.black,
     elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
+      padding: MaterialStateProperty.all<EdgeInsets>(
+          EdgeInsets.symmetric(vertical: 16)),
+      shape: MaterialStateProperty.all<OutlinedBorder>(RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(8)))),
       backgroundColor: MaterialStateProperty.all<Color>(Colors.black87),
       overlayColor: MaterialStateProperty.all<Color>(Colors.black54),
     )),
