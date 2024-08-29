@@ -1,5 +1,5 @@
-import 'package:did_u_make_ur_bed/src/app/screens/home/home_screen.dart';
-import 'package:did_u_make_ur_bed/src/app/screens/landing/landing_screen.dart';
+import 'package:did_u_make_ur_bed/src/app/presentation/home/home_screen.dart';
+import 'package:did_u_make_ur_bed/src/app/presentation/landing/landing_screen.dart';
 import 'package:flutter/cupertino.dart';
 
 class RouteGenerator {

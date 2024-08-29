@@ -1,19 +1,11 @@
-import 'package:did_u_make_ur_bed/src/app/screens/landing/landing_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_clean_architecture/flutter_clean_architecture.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class LandingScreen extends CleanView {
-  @override
-  _LandingScreenState createState() => _LandingScreenState(LandingController());
-}
-
-class _LandingScreenState
-    extends CleanViewState<LandingScreen, LandingController> {
-  _LandingScreenState(controller) : super(controller);
+class LandingScreen extends ConsumerWidget {
+  const LandingScreen({super.key});
 
   @override
-  // TODO: implement view
-  Widget get view {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       body: SafeArea(
         child: Column(
