@@ -2,12 +2,13 @@ import 'package:did_u_make_ur_bed/src/app/screens/landing/landing_controller.dar
 import 'package:flutter/material.dart';
 import 'package:flutter_clean_architecture/flutter_clean_architecture.dart';
 
-class LandingScreen extends View {
+class LandingScreen extends CleanView {
   @override
   _LandingScreenState createState() => _LandingScreenState(LandingController());
 }
 
-class _LandingScreenState extends ViewState<LandingScreen, LandingController> {
+class _LandingScreenState
+    extends CleanViewState<LandingScreen, LandingController> {
   _LandingScreenState(controller) : super(controller);
 
   @override
@@ -37,8 +38,8 @@ class _LandingScreenState extends ViewState<LandingScreen, LandingController> {
                                   'Did you make your bed?',
                                   style: Theme.of(context)
                                       .textTheme
-                                      .headline5
-                                      .copyWith(
+                                      .headlineSmall
+                                      ?.copyWith(
                                           color: Colors.black87,
                                           fontWeight: FontWeight.bold),
                                 ),
@@ -46,7 +47,8 @@ class _LandingScreenState extends ViewState<LandingScreen, LandingController> {
                               Container(
                                 child: Text(
                                   'Make your bed, Make your day.',
-                                  style: Theme.of(context).textTheme.subtitle2,
+                                  style:
+                                      Theme.of(context).textTheme.labelMedium,
                                 ),
                               ),
                             ],
@@ -61,7 +63,7 @@ class _LandingScreenState extends ViewState<LandingScreen, LandingController> {
               child: ElevatedButton(
                 onPressed: () {},
                 child: Text('Get Start',
-                    style: Theme.of(context).textTheme.button),
+                    style: Theme.of(context).textTheme.labelMedium),
               ),
             )
           ],
