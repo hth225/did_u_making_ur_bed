@@ -53,7 +53,9 @@ class LandingScreen extends ConsumerWidget {
               width: MediaQuery.of(context).size.width,
               margin: EdgeInsets.all(16),
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pushNamed('home');
+                },
                 child: Text('Get Start',
                     style: Theme.of(context).textTheme.labelMedium),
               ),
